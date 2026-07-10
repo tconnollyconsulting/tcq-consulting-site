@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>TCQ Consulting LLC | Thoughtfully Crafted iPhone Apps</title>
+
+  <style>
+    :root {
+      --text-color: #1c1c1e;
+      --sub-text: #8e8e93;
+      --accent: #007aff;
+      --bg: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 60px 20px;
+      background-color: var(--bg);
+      color: var(--text-color);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    /* Hero */
+
+    .hero {
+      margin-bottom: 80px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      margin-bottom: 20px;
+      font-size: 48px;
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -1px;
+    }
+
+    .hero p {
+      max-width: 600px;
+      margin: 0 auto;
+      color: var(--sub-text);
+      font-size: 20px;
+    }
+
+    /* App Grid */
+
+    .section-title {
+      margin-bottom: 40px;
+      font-size: 28px;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .app-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 40px;
+      margin-bottom: 80px;
+    }
+
+    .app-card {
+      color: inherit;
+      text-align: center;
+      text-decoration: none;
+      transition: transform 0.2s ease;
+    }
+
+    .app-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .app-card:focus-visible {
+      border-radius: 18px;
+      outline: 3px solid rgba(0, 122, 255, 0.35);
+      outline-offset: 8px;
+    }
+
+    .app-icon {
+      display: block;
+      width: 100px;
+      height: 100px;
+      margin: 0 auto 16px;
+      border-radius: 22px;
+      object-fit: contain;
+      filter: drop-shadow(0 8px 14px rgba(0, 0, 0, 0.14));
+      transition: filter 0.2s ease;
+    }
+
+    .app-card:hover .app-icon {
+      filter: drop-shadow(0 12px 18px rgba(0, 0, 0, 0.2));
+    }
+
+    .app-card h3 {
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .app-card p {
+      color: var(--sub-text);
+    }
+
+    /* About and Philosophy */
+
+    .about-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 60px;
+      margin-bottom: 80px;
+    }
+
+    .about-section h2 {
+      margin-bottom: 12px;
+      font-size: 28px;
+      line-height: 1.2;
+    }
+
+    .about-section p + p {
+      margin-top: 15px;
+    }
+
+    .philosophy {
+      padding: 40px;
+      border-radius: 20px;
+      background-color: #f5f5f7;
+    }
+
+    .philosophy h3 {
+      line-height: 1.3;
+    }
+
+    .philosophy ul {
+      margin-top: 15px;
+      list-style: none;
+    }
+
+    .philosophy li {
+      display: flex;
+      align-items: flex-start;
+      margin-top: 8px;
+    }
+
+    .philosophy li::before {
+      content: "✓";
+      flex-shrink: 0;
+      margin-right: 10px;
+      color: var(--text-color);
+      font-weight: 700;
+    }
+
+    /* Footer */
+
+    footer {
+      padding-top: 60px;
+      border-top: 1px solid #e5e5ea;
+      color: var(--sub-text);
+      text-align: center;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 8px 14px;
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    footer a:focus-visible {
+      border-radius: 4px;
+      outline: 3px solid rgba(0, 122, 255, 0.35);
+      outline-offset: 4px;
+    }
+
+    .copyright {
+      margin-top: 20px;
+    }
+
+    footer .signature {
+      margin-top: 10px;
+      color: var(--sub-text);
+      font-size: 14px;
+    }
+
+    /* Tablet and Mobile */
+
+    @media (max-width: 700px) {
+      body {
+        padding: 40px 20px;
+      }
+
+      .hero {
+        margin-bottom: 60px;
+      }
+
+      .hero h1 {
+        font-size: 36px;
+        line-height: 1.15;
+      }
+
+      .hero p {
+        font-size: 18px;
+      }
+
+      .app-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px 20px;
+        margin-bottom: 60px;
+      }
+
+      .about-section {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin-bottom: 60px;
+      }
+
+      footer {
+        padding-top: 45px;
+      }
+    }
+
+    /* Narrow iPhones */
+
+    @media (max-width: 420px) {
+      body {
+        padding: 32px 16px;
+      }
+
+      .hero {
+        margin-bottom: 50px;
+      }
+
+      .hero h1 {
+        font-size: 32px;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+
+      .section-title {
+        margin-bottom: 32px;
+        font-size: 26px;
+      }
+
+      .app-grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+
+      .philosophy {
+        padding: 28px 24px;
+      }
+
+      .footer-links {
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .footer-divider {
+        display: none;
+      }
+    }
+
+    /* Reduce Motion */
+
+    @media (prefers-reduced-motion: reduce) {
+      .app-card,
+      .app-icon {
+        transition: none;
+      }
+
+      .app-card:hover {
+        transform: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main>
+
+    <section class="hero">
+      <h1>Thoughtfully Crafted iPhone Apps for Everyday Life</h1>
+
+      <p>
+        Premium iOS apps designed to help you stay organized, make smarter
+        decisions, and enjoy everyday moments. Built with privacy, simplicity,
+        and long-term quality in mind.
+      </p>
+    </section>
+
+    <section aria-labelledby="apps-title">
+      <h2 class="section-title" id="apps-title">Our Apps</h2>
+
+      <div class="app-grid">
+
+        <a href="pagekey.html" class="app-card">
+          <img
+            src="pagekey-icon.png"
+            alt="PageKey app icon"
+            class="app-icon"
+          >
+          <h3>PageKey</h3>
+          <p>Generate secure passwords. Instantly.</p>
+        </a>
+
+        <a href="mybagcaddie.html" class="app-card">
+          <img
+            src="mybagcaddie-icon.png"
+            alt="My Bag Caddie app icon"
+            class="app-icon"
+          >
+          <h3>My Bag Caddie</h3>
+          <p>Know your distances. Swing with confidence.</p>
+        </a>
+
+        <a href="keeptrackpro.html" class="app-card">
+          <img
+            src="keeptrack-icon.png"
+            alt="KeepTrack Pro app icon"
+            class="app-icon"
+          >
+          <h3>KeepTrack Pro</h3>
+          <p>Organize life’s important information.</p>
+        </a>
+
+        <a href="stamped.html" class="app-card">
+          <img
+            src="stamped-icon.png"
+            alt="Stamped app icon"
+            class="app-icon"
+          >
+          <h3>Stamped</h3>
+          <p>Remember the moments that matter.</p>
+        </a>
+
+      </div>
+    </section>
+
+    <section class="about-section" aria-labelledby="about-title">
+
+      <div>
+        <h2 id="about-title">Built with Care</h2>
+
+        <p>
+          Hi, I’m Timothy Connolly. I’m an independent iOS developer and a
+          Staff Software Quality Assurance Engineer with more than 25 years
+          of experience building and testing software.
+        </p>
+
+        <p>
+          I created TCQ Consulting to build thoughtfully crafted iPhone apps
+          that solve everyday problems. Every app is designed, developed, and
+          thoroughly tested with a focus on privacy, reliability, simplicity,
+          and long-term value.
+        </p>
+      </div>
+
+      <div class="philosophy">
+        <h3>What Every TCQ App Shares</h3>
+
+        <ul>
+          <li>Privacy First</li>
+          <li>Native SwiftUI Design</li>
+          <li>No Advertisements</li>
+          <li>One-Time Purchases Whenever Possible</li>
+          <li>Built and Tested with Quality in Mind</li>
+        </ul>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+
+    <nav class="footer-links" aria-label="Footer navigation">
+      <a href="support.html">Support</a>
+      <span class="footer-divider" aria-hidden="true">•</span>
+
+      <a href="mailto:support@tcqconsulting.org">Contact</a>
+    </nav>
+
+    <p class="copyright">
+      Copyright © 2026 TCQ Consulting LLC
+    </p>
+
+    <p class="signature">
+      Made with care by Timothy Connolly
+    </p>
+
+  </footer>
+
+</body>
+</html>
