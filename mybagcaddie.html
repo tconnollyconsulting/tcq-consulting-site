@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
   <title>My Bag Caddie | TCQ Consulting LLC</title>
 
   <meta
@@ -14,12 +18,13 @@
   <style>
 
     :root{
-      --text:#1c1c1e;
-      --secondary:#6e6e73;
-      --accent:#007aff;
-      --surface:#f5f5f7;
-      --border:#e5e5ea;
-      --background:#ffffff;
+      --text:#102b27;
+      --secondary:#5d7069;
+      --accent:#4a8e08;
+      --surface:#f8fced;
+      --border:#d4e5c4;
+      --background:#edf4e8;
+      --glow:#e5f6cf;
     }
 
     *{
@@ -30,7 +35,8 @@
 
     body{
       min-height:100vh;
-      background:var(--background);
+      background:radial-gradient(circle at 50% 0%,var(--glow),var(--background) 44%);
+      background-attachment:fixed;
       color:var(--text);
       font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
       line-height:1.7;
@@ -102,14 +108,19 @@
     }
 
     .button:hover{
-      background:#0062cc;
+      background:#387006;
     }
 
     .highlights{
       margin-top:50px;
       background:var(--surface);
+      border-top:4px solid var(--accent);
       border-radius:22px;
       padding:30px;
+    }
+
+    .highlights li::marker{
+      color:var(--accent);
     }
 
     .highlights h2{
@@ -178,6 +189,14 @@
     }
 
   </style>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BBDXPTD3Z2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "G-BBDXPTD3Z2");
+  </script>
 </head>
 
 <body>
@@ -211,7 +230,7 @@ Designed to be simple, private, and easy to use whether you are on the course, a
 <div class="button-container">
 
 <a class="button"
-href="https://apps.apple.com/us/app/mybagcaddie/id6782050091"
+href="https://apps.apple.com/us/app/mybagcaddie/id6782050091" data-tcq-click="app-store" data-app="My Bag Caddie"
 target="_blank"
 rel="noopener noreferrer">
 
@@ -265,5 +284,6 @@ Made with care by Timothy Connolly
 
 </div>
 
+  <script defer src="tcq-click-analytics.js"></script>
 </body>
 </html>

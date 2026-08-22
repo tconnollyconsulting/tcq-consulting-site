@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
   <title>LaneLuck | TCQ Consulting LLC</title>
 
   <meta
@@ -14,12 +18,13 @@
 
   <style>
     :root {
-      --text: #1c1c1e;
-      --secondary: #6e6e73;
-      --accent: #007aff;
-      --surface: #f5f5f7;
-      --border: #e5e5ea;
-      --background: #ffffff;
+      --text: #13231b;
+      --secondary: #5e7065;
+      --accent: #438f08;
+      --surface: #f5faef;
+      --border: #cee2bf;
+      --background: #eaf4e7;
+      --glow: #ddf6c9;
     }
 
     * {
@@ -30,7 +35,8 @@
 
     body {
       min-height: 100vh;
-      background: var(--background);
+      background: radial-gradient(circle at 50% 0%, var(--glow), var(--background) 44%);
+      background-attachment: fixed;
       color: var(--text);
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
         Helvetica, Arial, sans-serif;
@@ -112,7 +118,7 @@
     }
 
     .button:hover {
-      background: #0062cc;
+      background: #347507;
     }
 
     .button.pending {
@@ -123,8 +129,13 @@
     .highlights {
       margin-top: 50px;
       padding: 30px;
+      border-top: 4px solid var(--accent);
       border-radius: 22px;
       background: var(--surface);
+    }
+
+    .highlights li::marker {
+      color: var(--accent);
     }
 
     .highlights h2 {
@@ -195,6 +206,14 @@
     }
   </style>
 
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BBDXPTD3Z2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "G-BBDXPTD3Z2");
+  </script>
 </head>
 
 <body>
@@ -219,13 +238,10 @@
 
       <div class="description">
         <p>
-          LaneLuck helps you better understand your regular commute by recording
-          active drives and turning them into clear, useful insights.
-        </p>
-
-        <p>
-          Review trip time, distance, average speed, estimated impact, and commute
-          patterns while keeping your drive history private on your iPhone.
+          LaneLuck records your active commute drives and turns them into clear,
+          useful insights. Review trip time, distance, average speed, estimated
+          impact, and commute patterns while keeping your drive history private
+          on your iPhone.
         </p>
       </div>
     </header>
@@ -233,7 +249,7 @@
     <div class="button-container">
       <a
         class="button"
-        href="https://apps.apple.com/us/app/laneluck/id6789893354"
+        href="https://apps.apple.com/us/app/laneluck/id6789893354" data-tcq-click="app-store" data-app="LaneLuck"
         target="_blank"
       >
         View on the App Store
@@ -267,5 +283,6 @@
     </footer>
 
   </div>
+  <script defer src="tcq-click-analytics.js"></script>
 </body>
 </html>
