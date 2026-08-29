@@ -56,6 +56,65 @@
       font-size: 20px;
     }
 
+    .store-showcase {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 24px;
+      max-width: 620px;
+      margin: 36px auto 0;
+      padding: 18px 20px 18px 26px;
+      border: 1px solid rgba(0, 122, 255, 0.16);
+      border-radius: 22px;
+      background: linear-gradient(135deg, #f5faff 0%, #eef5ff 100%);
+      box-shadow: 0 14px 34px rgba(0, 74, 173, 0.08);
+      text-align: left;
+    }
+
+    .store-count {
+      min-width: 150px;
+      color: #344054;
+      font-size: 15px;
+      line-height: 1.25;
+    }
+
+    .store-count strong {
+      display: block;
+      color: var(--text-color);
+      font-size: 30px;
+      font-weight: 800;
+      letter-spacing: -0.8px;
+    }
+
+    .store-link {
+      display: inline-flex;
+      flex: 1;
+      justify-content: center;
+      align-items: center;
+      min-height: 52px;
+      padding: 13px 20px;
+      border-radius: 15px;
+      background: var(--accent);
+      box-shadow: 0 8px 20px rgba(0, 122, 255, 0.22);
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 1.25;
+      text-align: center;
+      text-decoration: none;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .store-link:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 24px rgba(0, 122, 255, 0.28);
+    }
+
+    .store-link:focus-visible {
+      outline: 3px solid rgba(0, 122, 255, 0.35);
+      outline-offset: 4px;
+    }
+
     /* App Grid */
 
     .section-title {
@@ -247,6 +306,10 @@
         font-size: 18px;
       }
 
+      .store-showcase {
+        gap: 18px;
+      }
+
       .app-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 40px 20px;
@@ -281,6 +344,22 @@
 
         .hero p {
           font-size: 17px;
+        }
+
+        .store-showcase {
+          flex-direction: column;
+          gap: 14px;
+          margin-top: 28px;
+          padding: 20px;
+          text-align: center;
+        }
+
+        .store-count {
+          min-width: 0;
+        }
+
+        .store-link {
+          width: 100%;
         }
 
         .section-title {
@@ -340,11 +419,13 @@
 
     @media (prefers-reduced-motion: reduce) {
       .app-card,
-      .app-icon {
+      .app-icon,
+      .store-link {
         transition: none;
       }
 
-      .app-card:hover {
+      .app-card:hover,
+      .store-link:hover {
         transform: none;
       }
     }
@@ -371,6 +452,18 @@
         decisions, and enjoy everyday moments. Built with privacy, simplicity,
         and long-term quality in mind.
       </p>
+
+      <div class="store-showcase" aria-label="TCQ Consulting on the App Store">
+        <p class="store-count"><strong>14</strong> apps on the App Store</p>
+        <a
+          class="store-link"
+          href="https://apps.apple.com/us/developer/timothy-paul-connolly/id6772603383?platform=iphone"
+          target="_blank"
+          rel="noopener noreferrer"
+          data-tcq-click="developer-app-store"
+          data-app="TCQ Consulting App Portfolio"
+        >View All Apps on the App Store&nbsp;→</a>
+      </div>
     </section>
 
     <section aria-labelledby="apps-title">
