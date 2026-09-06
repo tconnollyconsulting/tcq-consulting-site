@@ -1,0 +1,12 @@
+
+/* Added content inherits each app's existing palette and layout. */
+img.app-icon { height: auto; aspect-ratio: 1 / 1; }
+.tcq-content { margin: 2.75rem 0 0; text-align: left; color: var(--text, var(--text-color, #1c1c1e)); font-size: 1rem; line-height: 1.7; }
+.tcq-content h2 { margin: 0 0 1rem; font-size: 1.4rem; color: inherit; }
+.tcq-content h3 { margin: 1.5rem 0 .4rem; font-size: 1.08rem; color: inherit; }
+.tcq-content p { margin: .5rem 0 1rem; color: inherit; }
+.tcq-content a, .tcq-publisher a { color: var(--accent, #007aff); text-decoration: underline; text-underline-offset: .15em; }
+.tcq-content ul { padding-left: 1.5rem; }
+.tcq-content li { margin: .4rem 0; }
+.tcq-content a:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
+.tcq-publisher { margin: 1.25rem auto; font-size: .9rem; line-height: 1.6; text-align:center; color: var(--secondary, #6e6e73); }

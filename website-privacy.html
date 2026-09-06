@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <title>Website Privacy | TCQ Consulting LLC</title>
+
+  
+
+  <style>
+    :root {
+      --text: #1c1c1e;
+      --secondary: #6e6e73;
+      --accent: #007aff;
+      --surface: #f5f5f7;
+      --border: #e5e5ea;
+      --background: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      background: var(--background);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Helvetica, Arial, sans-serif;
+      line-height: 1.7;
+    }
+
+    .page {
+      width: min(100%, 760px);
+      margin: 0 auto;
+      padding: 36px 24px 48px;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 44px;
+      color: var(--accent);
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .back-link:hover,
+    .support-card a:hover,
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      margin-bottom: 46px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: clamp(36px, 7vw, 52px);
+      font-weight: 800;
+      line-height: 1.08;
+      letter-spacing: -1.5px;
+    }
+
+    .subtitle {
+      max-width: 560px;
+      margin: 14px auto 0;
+      color: var(--secondary);
+      font-size: 18px;
+    }
+
+    .support-card {
+      margin-top: 38px;
+      padding: 30px;
+      border-radius: 22px;
+      background: var(--surface);
+    }
+
+    .support-card h2 {
+      margin-bottom: 10px;
+      font-size: 22px;
+      line-height: 1.3;
+    }
+
+    .support-card p + p {
+      margin-top: 14px;
+    }
+
+    .support-card ul {
+      margin-top: 16px;
+      padding-left: 24px;
+    }
+
+    .support-card li + li {
+      margin-top: 8px;
+    }
+
+    .email-section {
+      margin-top: 42px;
+      text-align: center;
+    }
+
+    .email-section h2 {
+      margin-bottom: 10px;
+      font-size: 22px;
+    }
+
+    .email-link {
+      display: inline-block;
+      margin-top: 8px;
+      color: var(--accent);
+      font-size: 18px;
+      font-weight: 700;
+      overflow-wrap: anywhere;
+      text-decoration: none;
+    }
+
+    .response-note {
+      max-width: 560px;
+      margin: 14px auto 0;
+      color: var(--secondary);
+    }
+
+    .apps-section {
+      margin-top: 48px;
+      text-align: center;
+    }
+
+    .apps-section h2 {
+      margin-bottom: 14px;
+      font-size: 22px;
+    }
+
+    .app-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px 18px;
+      color: var(--secondary);
+    }
+
+    a {
+      color: var(--accent);
+    }
+
+    footer {
+      margin-top: 64px;
+      padding-top: 28px;
+      border-top: 1px solid var(--border);
+      color: var(--secondary);
+      text-align: center;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px 18px;
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .signature {
+      margin-top: 18px;
+      font-size: 14px;
+    }
+
+    .back-link:focus-visible,
+    a:focus-visible {
+      border-radius: 6px;
+      outline: 3px solid rgba(0, 122, 255, 0.3);
+      outline-offset: 4px;
+    }
+
+    @media (max-width: 600px) {
+      .page {
+        padding: 28px 18px 40px;
+      }
+
+      .back-link {
+        margin-bottom: 34px;
+      }
+
+      header {
+        margin-bottom: 36px;
+      }
+
+      .support-card {
+        padding: 24px 22px;
+      }
+
+      .app-list {
+        flex-direction: column;
+        gap: 6px;
+      }
+    }
+  </style>
+
+<meta name="description" content="How tcqconsulting.org uses website analytics and handles support messages, separate from the privacy practices of TCQ iPhone apps.">
+<link rel="canonical" href="https://www.tcqconsulting.org/website-privacy.html">
+<link rel="stylesheet" href="tcq-content.css">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TCQ Consulting LLC">
+<meta property="og:title" content="Website Privacy | TCQ Consulting LLC">
+<meta property="og:description" content="How tcqconsulting.org uses website analytics and handles support messages, separate from the privacy practices of TCQ iPhone apps.">
+<meta property="og:url" content="https://www.tcqconsulting.org/website-privacy.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Website Privacy | TCQ Consulting LLC">
+<meta name="twitter:description" content="How tcqconsulting.org uses website analytics and handles support messages, separate from the privacy practices of TCQ iPhone apps.">
+<meta property="og:image" content="https://www.tcqconsulting.org/favicon-512.png">
+<meta property="og:image:alt" content="TCQ Consulting LLC logo">
+<meta name="twitter:image" content="https://www.tcqconsulting.org/favicon-512.png">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://www.tcqconsulting.org/#organization", "name": "TCQ Consulting LLC", "legalName": "TCQ Consulting LLC", "url": "https://www.tcqconsulting.org/", "description": "An independent iOS software company founded by Timothy Connolly, developing thoughtfully crafted, privacy-focused iPhone apps.", "founder": {"@id": "https://www.tcqconsulting.org/#founder"}, "email": "support@tcqconsulting.org", "logo": "https://www.tcqconsulting.org/favicon-512.png"}, {"@type": "Person", "@id": "https://www.tcqconsulting.org/#founder", "name": "Timothy Connolly", "url": "https://www.tcqconsulting.org/#about-title", "sameAs": ["https://apps.apple.com/us/developer/timothy-paul-connolly/id6772603383?platform=iphone"]}, {"@type": "WebSite", "@id": "https://www.tcqconsulting.org/#website", "name": "TCQ Consulting LLC", "url": "https://www.tcqconsulting.org/", "publisher": {"@id": "https://www.tcqconsulting.org/#organization"}}, {"@type": "WebPage", "@id": "https://www.tcqconsulting.org/website-privacy.html#webpage", "url": "https://www.tcqconsulting.org/website-privacy.html", "name": "Website Privacy | TCQ Consulting LLC", "description": "How tcqconsulting.org uses website analytics and handles support messages, separate from the privacy practices of TCQ iPhone apps.", "isPartOf": {"@id": "https://www.tcqconsulting.org/#website"}, "publisher": {"@id": "https://www.tcqconsulting.org/#organization"}, "inLanguage": "en"}]}</script>
+</head>
+
+<body>
+  <main class="page"><a class="back-link" href="/">← Back to Home</a><header><h1>Website Privacy</h1></header><section class="tcq-content"><p>Last updated: September 6, 2026</p><p>This page explains measurement and contact information on tcqconsulting.org, the website of TCQ Consulting LLC. Each app has a separate privacy policy describing its own data practices.</p><h2>Website analytics</h2><p>The website uses Google Analytics to measure visits and interactions. App-card clicks and App Store button clicks are recorded with the app name. The website analytics code is separate from the iPhone apps and does not give TCQ access to the records stored inside those apps.</p><p>Google Analytics can process browser and device information and use cookies or similar identifiers, depending on your browser and consent settings. Google and the website hosting provider process technical information needed to deliver and measure the website, such as network requests. See <a href="https://policies.google.com/technologies/partner-sites">how Google uses information from sites that use its services</a>.</p><h2>Email support</h2><p>If you email support@tcqconsulting.org, TCQ receives the email address, message, and attachments you choose to send and uses them to respond. Please do not include passwords or unnecessary private app records.</p><h2>App Store and other links</h2><p>Opening an App Store link takes you to Apple. Apple and other destinations handle information under their own policies. See <a href="https://www.apple.com/legal/privacy/">Apple’s privacy policy</a>.</p><h2>Your choices</h2><p>You can manage cookies and website storage in your browser. Google also provides an <a href="https://tools.google.com/dlpage/gaoptout">Analytics opt-out browser add-on</a> for supported browsers. App storage, permissions, and iCloud choices are described in each app’s policy.</p><h2>Questions</h2><p>Contact <a href="mailto:support@tcqconsulting.org">support@tcqconsulting.org</a> with questions about this website.</p></section><footer><nav class="footer-links"><a href="/">Our Apps</a><a href="support.html">Support</a><a href="website-privacy.html">Website Privacy</a></nav><p class="signature">Made with care by Timothy Connolly</p></footer></main>
+</body>
+</html>
