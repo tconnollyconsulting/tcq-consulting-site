@@ -429,6 +429,14 @@
         transform: none;
       }
     }
+  /* Keep both homepage actions together; stack naturally on small screens. */
+    .store-showcase { max-width: 960px; }
+    .store-showcase .store-link { flex: 1 1 220px; align-self: stretch; }
+    @media (max-width: 700px) {
+      .store-showcase { flex-wrap: wrap; }
+      .store-showcase .store-count { flex-basis: 100%; }
+      .store-showcase .store-link { flex: 0 0 auto; width: 100%; }
+    }
   </style>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-BBDXPTD3Z2"></script>
@@ -479,6 +487,7 @@
           data-tcq-click="developer-app-store"
           data-app="TCQ Consulting App Portfolio"
         >View All Apps on the App Store&nbsp;→</a>
+        <a class="store-link" href="app-finder.html">Find Your TCQ App&nbsp;→</a>
       </div>
     </section>
 
